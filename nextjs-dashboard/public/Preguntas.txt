@@ -1,0 +1,99 @@
+1¿Qué es Next.js y por qué se dice que es el framework de React más popular? 
+Es un framework basado en React que permite crear aplicaciones web completas.
+-Tiene backend + frontend integrado
+-Optimiza rendimiento automáticamente
+-Maneja rutas sin configuración
+-Mejora SEO
+
+2 ¿Cuál es el comando exacto con npx para inicializar un proyecto de Next.js asegurando usar la última versión?
+npx create-next-app@latest
+
+3 ¿Cuál es el comando utilizado para levantar el entorno de desarrollo y en qué puerto se ejecuta por defecto? 
+npm run dev
+
+4 ¿Qué función cumple el comando npm run build en un proyecto de Next.js? 
+✔ Minimiza código
+✔ Mejora rendimiento
+
+5 Describe para que sirven las carpetas, public y app
+📁 app
+páginas
+layouts
+rutas
+📁 public
+imágenes
+íconos
+archivos accesibles directamente
+
+6 ¿Que es un CCS MODULE y como se usan? 
+Estilos locales No afectan otros componentes
+
+7 ¿Que hace el componente  Layout.tsx ? 
+Define la estructura global
+Header
+Footer
+Estilos globales
+
+8 ¿Que es el enrutamiento ?
+Es cómo navegas entre páginas
+
+9 ¿Cual es la diferencia entre Image e img?
+Image
+HTML normal
+No optimiza
+Img Next.js
+Optimiza imágenes
+Lazy loading automático
+
+10 ¿Que es el Lazy Load?
+Optimiza imágenes
+Lazy loading automático
+
+11 ¿Cual es el funcionamiento del siguiente codigo, en que momento se muestra cada imagen?
+El código utiliza el componente <Image /> de Next.js para mostrar dos imágenes diferentes dependiendo del tamaño de la pantalla del usuario, aplicando diseño responsivo mediante clases de Tailwind CSS.
+Se definen dos imágenes:
+La primera imagen (hero-desktop.png) tiene la clase hidden md:block. Esto significa que está oculta por defecto en pantallas pequeñas, pero se muestra cuando el tamaño de la pantalla es mediano o mayor (a partir de aproximadamente 768px), es decir, en computadoras o laptops.
+La segunda imagen (hero-mobile.png) tiene la clase block md:hidden. Esto significa que es visible por defecto en pantallas pequeñas, pero se oculta cuando el tamaño de la pantalla es mediano o mayor, es decir, en dispositivos móviles.
+
+12 ¿Como funciona el enrutamiento en Next JS  ? 
+El enrutamiento en Next.js funciona de manera automática mediante el sistema de archivos. Esto significa que cada carpeta y archivo dentro de la carpeta app representa una ruta en la aplicación. Por ejemplo, si se crea un archivo llamado page.tsx dentro de la carpeta dashboard, automáticamente se genera la ruta /dashboard. No es necesario configurar rutas manualmente como en otros frameworks.
+
+13 ¿Que es una ruta en el contexto web y donde las hemos visto en la clase ? 
+Una ruta es la dirección o URL que permite acceder a una página específica dentro de una aplicación web. Por ejemplo, /dashboard o /login. En la clase las vimos al ejecutar el proyecto en el navegador, como en http://localhost:3000/dashboard, donde cada ruta corresponde a una vista diferente.
+Se ha visualidado en postman 
+
+14 ¿Que arrojo a MiduDev el localhost:300/dashboard, donde hemos visto esos errores en la clase ? 
+Una ruta es la dirección o URL que permite acceder a una página específica dentro de una aplicación web. Por ejemplo, /dashboard o /login. En la clase las vimos al ejecutar el proyecto en el navegador, como en http://localhost:3000/dashboard, donde cada ruta corresponde a una vista diferente en postamn
+
+16 ¿Que  es el File System Routing?
+El File System Routing es un sistema en el cual las rutas de la aplicación se generan automáticamente a partir de la estructura de carpetas y archivos. En Next.js, cada carpeta representa una ruta y cada archivo page.tsx define el contenido de esa ruta, eliminando la necesidad de configurar rutas manualmente.
+
+17 ¿Como funcionan las rutas anidadas?
+Las rutas anidadas funcionan creando carpetas dentro de otras carpetas. Por ejemplo, si se tiene app/dashboard/settings/page.tsx, la ruta generada será /dashboard/settings. Esto permite organizar la aplicación de forma jerárquica y estructurada.
+
+18 ¿Investiga por que es necesario esto?
+El uso de export default function es necesario porque permite que una función (en este caso, un componente de React) pueda ser exportada como el elemento principal de un archivo y luego ser importada y utilizada en otras partes de la aplicación.
+
+En Next.js, esto es especialmente importante porque el framework espera que cada archivo como page.tsx o layout.tsx exporte un componente por defecto. Este componente es el que Next.js va a renderizar automáticamente cuando se accede a una ruta específica.
+19 ¿Para que sirve el componente Link?
+El componente Link de Next.js se utiliza para navegar entre páginas sin recargar el navegador. Esto permite una navegación más rápida y fluida, ya que solo se actualiza el contenido necesario en lugar de cargar toda la página nuevamente.
+
+20 ¿Que se carga cuando usamos <a> y que cuando se usa <link> ?
+Cuando se usa la etiqueta <a>, el navegador recarga completamente la página, lo que puede hacer la navegación más lenta. En cambio, cuando se usa el componente <Link> de Next.js, la navegación es interna y no recarga la página completa, lo que mejora el rendimiento y la experiencia del usuario.
+
+21 ¿Investiga que es un Hook?
+Un Hook es una función especial de React que permite usar características como el estado o efectos dentro de componentes funcionales. Ejemplos comunes son useState y useEffect.
+
+22 ¿Que hooks usa Midu?
+usePathname
+
+23 ¿Por que ocurre el siguiente error?
+El error ocurre porque se está utilizando el hook usePathname dentro de un componente que se está ejecutando en el servidor, cuando este hook solo puede utilizarse en componentes del cliente.
+
+En Next.js, por defecto, los componentes son Server Components, lo que significa que se ejecutan en el servidor. Sin embargo, algunos hooks de React y Next.js, como usePathname, necesitan ejecutarse en el navegador (cliente), ya que dependen de información del entorno del usuario, como la URL actual.
+
+24 ¿Es posible ejecutar los componentes de react en el cliente y el servidor?
+Sí, es posible. Next.js permite combinar componentes del servidor y del cliente para optimizar el rendimiento y la experiencia del usuario.
+
+25 ¿Que es el code splitting?
+Sí, es posible. Next.js permite combinar componentes del servidor y del cliente para optimizar el rendimiento y la experiencia del usuario.
